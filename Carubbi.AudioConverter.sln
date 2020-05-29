@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carubbi.AudioConverter.Api", "Carubbi.AudioConverter.Api\Carubbi.AudioConverter.Api.csproj", "{4E758F4A-B140-4485-84FF-582C38CD8819}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carubbi.IdentityServer", "Carubbi.IdentityServer\Carubbi.IdentityServer.csproj", "{F495E6B4-55AC-40E1-9696-2901D7480F7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carubbi.IdentityServer.EF", "Carubbi.IdentityServer.EF\Carubbi.IdentityServer.EF.csproj", "{3DED1579-7D7F-4A70-A696-85422BE73031}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E758F4A-B140-4485-84FF-582C38CD8819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E758F4A-B140-4485-84FF-582C38CD8819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E758F4A-B140-4485-84FF-582C38CD8819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E758F4A-B140-4485-84FF-582C38CD8819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F495E6B4-55AC-40E1-9696-2901D7480F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F495E6B4-55AC-40E1-9696-2901D7480F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F495E6B4-55AC-40E1-9696-2901D7480F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F495E6B4-55AC-40E1-9696-2901D7480F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DED1579-7D7F-4A70-A696-85422BE73031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DED1579-7D7F-4A70-A696-85422BE73031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DED1579-7D7F-4A70-A696-85422BE73031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DED1579-7D7F-4A70-A696-85422BE73031}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79E37DD8-BE82-4ACB-8EC3-0C71CC5DCAC5}
+	EndGlobalSection
+EndGlobal
