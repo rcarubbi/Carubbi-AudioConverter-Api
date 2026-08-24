@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="Carubbi.AudioConverter.Api/Carubbi.AudioConverter.Api.csproj" />
   <Project Path="Carubbi.AudioConverter.Api.Tests/Carubbi.AudioConverter.Api.Tests.csproj" />
+  <Project Path="Carubbi.AudioConverter.Api.IntegrationTests/Carubbi.AudioConverter.Api.IntegrationTests.csproj" />
 </Solution>
+

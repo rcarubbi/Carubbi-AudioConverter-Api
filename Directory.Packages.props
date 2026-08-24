@@ -8,6 +8,7 @@
     <PackageVersion Include="NAudio" Version="2.2.1" />
     <PackageVersion Include="NAudio.Lame" Version="2.1.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+    <PackageVersion Include="Testcontainers" Version="4.14.0" />
     <PackageVersion Include="TUnit" Version="1.65.51" />
   </ItemGroup>
 

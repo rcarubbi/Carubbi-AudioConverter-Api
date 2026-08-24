@@ -10,6 +10,8 @@ namespace Carubbi.AudioConverter.Api.Converters
         public string From => "ogg";
         public string To => "wav";
 
+        private static string OpusDec => OperatingSystem.IsWindows() ? @".\opusdec.exe" : "opusdec";
+
         public async Task<byte[]> ConvertAsync(byte[] content)
         {
             var inputTemp = Path.GetTempFileName();
@@ -20,7 +22,7 @@ namespace Carubbi.AudioConverter.Api.Converters
             {
                 StartInfo =
                 {
-                    FileName = @".\opusdec.exe",
+                    FileName = OpusDec,
                     Arguments = $"{inputTemp} {outputTemp}",
                     CreateNoWindow = true,
                     UseShellExecute = false,

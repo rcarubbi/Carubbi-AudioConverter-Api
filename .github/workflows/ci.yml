@@ -19,5 +19,21 @@ jobs:
       - name: Build
         run: dotnet build Carubbi.AudioConverter.slnx -c Release
 
-      - name: Test
+      - name: Unit tests
         run: dotnet run --project Carubbi.AudioConverter.Api.Tests -c Release --no-build
+
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build
+        run: dotnet build Carubbi.AudioConverter.Api.IntegrationTests -c Release
+
+      - name: Integration tests (Testcontainers)
+        run: dotnet run --project Carubbi.AudioConverter.Api.IntegrationTests -c Release --no-build
