@@ -19,7 +19,7 @@ namespace Carubbi.AudioConverter.Api.Converters
 
         public async Task<byte[]> ConvertAsync(byte[] content)
         {
-            var selector = _serviceProvider.GetService<IConverterSelector>();
+            var selector = _serviceProvider.GetRequiredService<IConverterSelector>();
             var wavToOggConverter = selector.Select("wav", "ogg");
             var mp3ToWavConverter = selector.Select("mp3", "wav");
             return (await wavToOggConverter.ConvertAsync(await mp3ToWavConverter.ConvertAsync(content)));

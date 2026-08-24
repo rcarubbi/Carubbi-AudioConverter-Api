@@ -6,6 +6,6 @@ namespace Carubbi.AudioConverter.Api.Validators
 {
     public interface IFileValidator
     {
-        Task<(byte[], string)> Validate(IFormFile formFile, ModelStateDictionary modelState, long sizeLimit);
+        Task<(byte[] Content, string? From)> Validate(IFormFile? formFile, ModelStateDictionary modelState, long sizeLimit);
     }
 }

@@ -13,7 +13,7 @@ namespace Carubbi.AudioConverter.Api.Validators
     public class FileValidator : IFileValidator
     {
 
-        private static readonly Dictionary<string, List<byte[]>> FileSignature = new Dictionary<string, List<byte[]>>
+        private static readonly Dictionary<string, List<byte[]>> FileSignature = new()
         {
             { ".mp3", new List<byte[]> { new byte[] { 0x49, 0x44, 0x33 } } },
             { ".wav", new List<byte[]> { new byte[] { 0x52, 0x49, 0x46, 0x46 } } },
@@ -23,7 +23,7 @@ namespace Carubbi.AudioConverter.Api.Validators
             } },
         };
          
-        public async Task<(byte[], string)> Validate(IFormFile formFile, ModelStateDictionary modelState, long sizeLimit)
+        public async Task<(byte[] Content, string? From)> Validate(IFormFile? formFile, ModelStateDictionary modelState, long sizeLimit)
         {
             if (formFile == null)
             {
@@ -71,7 +71,7 @@ namespace Carubbi.AudioConverter.Api.Validators
                 }
                 else
                 {
-                    return (memoryStream.ToArray(), extension.Substring(1));
+                    return (memoryStream.ToArray(), extension![1..]);
                 }
             }
             catch (Exception ex)
@@ -85,7 +85,7 @@ namespace Carubbi.AudioConverter.Api.Validators
             return (new byte[0], null);
         }
 
-        private static (bool, string) IsValidFileExtensionAndSignature(string fileName, Stream data)
+        private static (bool Valid, string? Extension) IsValidFileExtensionAndSignature(string? fileName, Stream? data)
         {
             if (string.IsNullOrEmpty(fileName) || data == null || data.Length == 0)
             {

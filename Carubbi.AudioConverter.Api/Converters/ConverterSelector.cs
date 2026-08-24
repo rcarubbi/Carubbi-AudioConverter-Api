@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace Carubbi.AudioConverter.Api.Converters
 {
@@ -13,7 +11,7 @@ namespace Carubbi.AudioConverter.Api.Converters
             _converters = converters;
         }
 
-        public IConverter Select(string @from, string to)
+        public IConverter Select(string from, string to)
         {
             var converter = _converters.FirstOrDefault(x => x.From == from && x.To == to);
             if (converter == null)

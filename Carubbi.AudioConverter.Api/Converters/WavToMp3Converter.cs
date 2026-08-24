@@ -25,7 +25,7 @@ namespace Carubbi.AudioConverter.Api.Converters
             await using var outPutStream = new MemoryStream();
             await using var waveStream = new WaveFileReader(new MemoryStream(content));
             await using var conversionStream = new WaveFormatConversionStream(target, waveStream);
-            await using var writer = new LameMP3FileWriter(outPutStream, conversionStream.WaveFormat, 32, null);
+            await using var writer = new LameMP3FileWriter(outPutStream, conversionStream.WaveFormat, (LAMEPreset)32, null);
             await conversionStream.CopyToAsync(writer);
 
             return outPutStream.ToArray();
